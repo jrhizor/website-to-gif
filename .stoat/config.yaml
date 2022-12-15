@@ -4,5 +4,5 @@ enabled: true
 tasks:
  preview:
    static_hosting:
-     path: docs/img/preview.gif
+     path: docs/images/preview.gif
 
