@@ -1,6 +1,7 @@
 import os
 from time import sleep
 from PIL import Image
+from PIL import ImageOps
 from io import BytesIO
 from base64 import b64decode
 from selenium import webdriver
@@ -131,6 +132,8 @@ def process_frame(file: str):
     image = image.resize(
         size=(int(_FINAL_W), int(_FINAL_H)), resample=Image.Resampling[_RESIZING_FILTER]
     )
+    image = ImageOps.expand(image, border=(int(0.1*image.size[0]),int(0.1*image.size[1]),int(0.1*image.size[0]),int(0.1*image.size[1])), fill=(0,0,0))
+
 
     return image
 
