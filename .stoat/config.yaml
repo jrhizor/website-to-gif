@@ -1,6 +1,7 @@
 ---
 version: 1
 enabled: true
+comment_template_file: ".stoat/template.hbs"
 tasks:
  preview:
    static_hosting:
