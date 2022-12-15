@@ -23,3 +23,8 @@ jobs:
           time_per_frame: 80
           window_width: 1280
           window_height: 720
+
+      - name: Run Stoat Action
+        uses: stoat-dev/stoat-action@v0
+        if: always()
+
