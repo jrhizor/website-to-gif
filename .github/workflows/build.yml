@@ -1,0 +1,25 @@
+name: "Build"
+
+on:
+  push:
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate Preview
+        uses: ./
+        with:
+          url: "https://docs.github.com/en/get-started/quickstart/be-social"
+          save_path: '/docs/images'
+          file_format: gif
+          file_name: preview
+          scroll_step: 30
+          time_per_frame: 80
+          window_width: 1280
+          window_height: 720
