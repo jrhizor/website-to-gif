@@ -1,0 +1,8 @@
+---
+version: 1
+enabled: true
+comment_template_file: ".stoat/template.hbs"
+plugins:
+  static_hosting:  
+    preview:
+      path: docs/images/preview.gif
